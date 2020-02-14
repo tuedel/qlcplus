@@ -37,7 +37,7 @@ OSCPacketizer::~OSCPacketizer()
 void OSCPacketizer::setupOSCDmx(QByteArray &data, quint32 universe, quint32 channel, uchar value)
 {
     data.clear();
-    QString path = QString("/%1/dmx/%2").arg(universe).arg(channel);
+    QString path = QString("/dmx/%1/%2").arg(universe).arg(channel);
     data.append(path);
 
     // add trailing zeros to reach a multiple of 4
